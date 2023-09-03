@@ -1,0 +1,131 @@
+00Exploratory Data  Analysis-1
+Assignment Questions 
+Assignment 
+Q1. What are the key features of the wine quality data set? Discuss the importance of each feature in  predicting the quality of wine. 
+
+The Wine Quality Dataset is a commonly used dataset in machine learning and predictive modeling, particularly for regression and classification tasks. This dataset contains information about red and white variants of Portuguese "Vinho Verde" wine. It provides various features that can be used to predict the quality of the wine. Here are the key features of the Wine Quality Dataset and their importance in predicting wine quality:
+Fixed Acidity:
+Importance: Fixed acidity represents the amount of non-volatile acids in the wine, which contributes to its overall taste and stability. It can influence the perceived quality of the wine, as wines with balanced acidity tend to be preferred.
+Volatile Acidity:
+Importance: Volatile acidity measures the presence of volatile acids, primarily acetic acid, in the wine. High volatile acidity can lead to off-flavors and spoilage, making it a critical factor in assessing wine quality.
+Citric Acid:
+Importance: Citric acid is a naturally occurring acid found in wine. It can enhance the freshness and flavor of the wine, contributing to its overall quality. A balanced level of citric acid is desirable.
+Residual Sugar:
+Importance: Residual sugar represents the amount of sugar remaining in the wine after fermentation. It affects the wine's sweetness and perceived quality. The right balance of residual sugar is crucial for various wine styles, from dry to sweet.
+pH:
+Importance: pH measures the acidity or alkalinity of the wine. It influences the wine's taste, stability, and microbial activity during fermentation and aging. A proper pH level is critical for wine quality.
+Alcohol:
+Importance: Alcohol content significantly impacts the wine's body, flavor, and perceived quality. It contributes to the wine's overall balance and mouthfeel.
+
+Q2. How did you handle missing data in the wine quality data set during the feature engineering process?  Discuss the advantages and disadvantages of different imputation techniques. 
+Handling missing data is a crucial step in the feature engineering process when working with datasets like the Wine Quality Dataset. Missing data can significantly impact the quality of machine learning models and the validity of analysis. Several techniques can be used to handle missing data, each with its own advantages and disadvantages. Here are some common approaches and their pros and cons:
+Removing Rows with Missing Data (Listwise Deletion):
+Advantages:
+Simple and quick.
+Avoids introducing potential biases by imputing missing values.
+Disadvantages:
+Can result in a loss of valuable information, especially if there are many missing values.
+Reduces the size of the dataset, which may affect model performance.
+Mean, Median, or Mode Imputation:
+Advantages:
+Simple and doesn't require complex calculations.
+Preserves the sample size and doesn't reduce the dataset.
+Disadvantages:
+Ignores relationships between variables and may introduce bias.
+Reduces variance in the data, potentially underestimating uncertainty.
+
+Imputing with Statistical Models (e.g., Regression Imputation):
+Advantages:
+Takes into account relationships between variables.
+Can provide more accurate imputations than basic statistics.
+Disadvantages:
+Requires additional computational resources.
+Assumes that the relationships used for imputation are linear or appropriate.
+Predictive Mean Matching:
+Advantages:
+Combines the advantages of both statistical and machine learning approaches.
+Tries to maintain the distribution of the observed values.
+Disadvantages:
+More complex than basic imputation methods.
+May not perform well if the predictors used are not appropriate.
+
+
+Q3. What are the key factors that affect students' performance in exams? How would you go about  analyzing these factors using statistical techniques? 
+Students' performance in exams can be influenced by various factors, and analyzing these factors using statistical techniques can provide valuable insights for educational institutions and policymakers. Here are some key factors that can affect students' performance in exams:
+Study Habits and Time Management: How effectively students manage their study time, including their study routines and strategies.
+Prior Knowledge: The level of understanding and knowledge students bring to the subject matter before studying.
+Attendance: Regular attendance in classes and engagement in coursework.
+Teacher Quality: The effectiveness of teaching methods and the quality of instruction provided by teachers.
+Socioeconomic Background: The economic and social conditions of students' families, which can influence access to resources and support.
+Motivation: Students' intrinsic and extrinsic motivation to learn and succeed in exams.
+Peer Influence: The impact of peers on study habits, motivation, and academic performance.
+Health and Well-being: Physical and mental health can affect students' ability to study and perform well in exams.
+Parental Involvement: The level of involvement and support from parents or guardians in a student's education.
+
+
+Data Collection: Gather data on students' performance in exams and the factors listed above. This data can be collected through surveys, questionnaires, academic records, and other relevant sources.
+Data Preprocessing: Clean and prepare the data for analysis. This includes handling missing values, outliers, and data transformations if necessary.
+Descriptive Analysis: Use descriptive statistics to summarize the data and gain an initial understanding of the relationships between variables. This can include calculating means, medians, standard deviations, and frequency distributions.
+Correlation Analysis: Conduct correlation analysis to identify relationships between variables. For example, you can use Pearson correlation coefficients to measure the strength and direction of associations.
+Regression Analysis: Perform regression analysis to model the relationship between students' performance (dependent variable) and the factors (independent variables). Multiple linear regression can be used if there are multiple factors to consider.
+Hypothesis Testing: Use hypothesis tests to determine if there are statistically significant relationships between factors and exam performance. For categorical variables, chi-squared tests can be applied.
+Data Visualization: Create visualizations such as scatterplots, histograms, and bar charts to visualize the data and relationships between variables.
+Machine Learning: Consider using machine learning techniques, such as decision trees or random forests, to build predictive models that can help identify the most influential factors in predicting exam performance.
+Interpretation: Interpret the results of the analysis to draw conclusions about which factors have the most significant impact on students' performance in exams.
+
+
+
+
+
+Q4. Describe the process of feature engineering in the context of the student performance data set. How  did you select and transform the variables for your model? 
+
+
+
+Data Exploration:
+Start by exploring the dataset to understand its structure, features, and target variable(s). Identify categorical and numerical features, missing values, and potential outliers.
+Gain domain knowledge or consult with domain experts to understand the significance of each feature in the context of predicting student performance.
+Feature Selection:
+Select features that are likely to be relevant for predicting student performance. This may involve removing irrelevant or redundant features.
+Use techniques like correlation analysis, feature importance from tree-based models, or domain knowledge to guide feature selection.
+Handling Categorical Variables:
+Convert categorical variables into a numerical format that machine learning models can use. Common methods include one-hot encoding, label encoding, or target encoding.
+Consider the cardinality of categorical variables; high-cardinality features may require special handling, such as feature hashing or embedding.
+Handling Missing Values:
+Decide on a strategy for handling missing values. Options include imputation (filling missing values with estimated values) or removing rows or columns with missing data.
+Carefully consider the impact of imputation methods on model performance.
+Feature Transformation:
+Transform numerical features if they exhibit non-normality. Common transformations include logarithmic, square root, or Box-Cox transformations.
+Feature Engineering:
+Create new features that capture relevant information. For example, you might create a "study time ratio" feature by dividing weekly study time by the number of courses.
+Consider interaction terms or polynomial features to capture non-linear relationships between variables.
+Dimensionality Reduction (if necessary):
+Apply dimensionality reduction techniques like Principal Component Analysis (PCA) if you have a large number of features and want to reduce computational complexity while preserving essential information.
+Feature Scaling (if necessary):
+Ensure that the engineered features are appropriately scaled if you've created new features that aren't on the same scale as the original ones
+Model Evaluation:
+Train machine learning models using the engineered features and evaluate their performance using appropriate metrics (e.g., accuracy, F1 score, RMSE).
+Use techniques like cross-validation to assess model generalization.
+Iterative Process:
+Feature engineering is often an iterative process. After evaluating model performance, you may discover that further feature engineering is needed, or certain features should be re-evaluated or removed.
+
+Q5. Load the wine quality data set and perform exploratory data analysis (EDA) to identify the distribution  of each feature. Which feature(s) exhibit non-normality, and what transformations could be applied to  these features to improve normality? 
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+df=pd.read_csv('winequality-red.csv')
+df.head()
+df.info()df.info()
+Df.shape
+df.isnull().sum()
+df['quality'].unique()
+df[df.duplicated()]
+df.drop_duplicates(inplace=True)
+df.corr()
+plt.figure(   figsize=(10,10))
+sns.heatmap(df.corr(), annot=True)
+df.quality.value_counts().plot(kind='bar')
+sns.catplot(x='alcohol',y='quality',data=df,kind='box',height=10,aspect=2)
+Q6. Using the wine quality data set, perform principal component analysis (PCA) to reduce the number of  features. What is the minimum number of principal components required to explain 90% of the variance in  the data? 
+Note:- We can use Wine quality dataset and Student Performance Data set as per the discussion in lecture. 
+Note:  Create your assignment in Jupyter notebook and upload it to GitHub & share that github repository  link through your dashboard. Make sure the repository is public.
+Data Science Masters 
